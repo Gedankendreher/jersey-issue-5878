@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>issue.reproducer</groupId>
+  <artifactId>jersey-5878</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Jersey Issue 5878</name>
+  <description>NPE in HK2</description>
+  
+  <properties>
+  	<maven.compiler.release>17</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <version-spring-boot>3.4.3</version-spring-boot>
+
+    <!-- maven build environment versions -->
+    <version.maven.jar>3.4.2</version.maven.jar>
+    <version.maven.clean>3.4.1</version.maven.clean>
+    <version.maven.compiler>3.14.0</version.maven.compiler>
+    <version.maven.surefire>3.5.2</version.maven.surefire>
+    <version.maven.resources>3.3.1</version.maven.resources>
+    <version.maven.javadoc>3.11.2</version.maven.javadoc>
+    <version.maven.install>3.1.4</version.maven.install>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-jersey</artifactId>
+        <version>${version-spring-boot}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <version>${version-spring-boot}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>  
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jersey</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+  </dependencies>
+
+</project>
