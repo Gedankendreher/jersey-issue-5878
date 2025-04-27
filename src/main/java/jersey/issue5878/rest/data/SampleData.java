@@ -1,5 +1,16 @@
 package jersey.issue5878.rest.data;
 
-public class SampleData {
+import java.util.UUID;
 
+public class SampleData {
+	private final String uuid;
+
+	public SampleData() {
+		super();
+		this.uuid = UUID.randomUUID().toString();
+	}
+
+	public String getUuid() {
+		return uuid;
+	}
 }
